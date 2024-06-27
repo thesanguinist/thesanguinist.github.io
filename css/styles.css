@@ -1,0 +1,208 @@
+/* COLOUR PALETTE
+Denim #1E6FC1
+Woodland #424D20
+Heathered Gray #B8AC99
+Seagull #77ADE5 */
+
+/* GLOBAL STYLES
+-----------------------------------*/
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* set default to 10px */
+}
+*, *:before, *:after { /* what does this do? */
+    box-sizing: inherit;
+}
+
+html, body {
+    height: 100%;
+}
+body {
+    background:#77ADE5;
+
+    margin: 0;
+    font-family: "PT Serif", serif;
+    font-size: 1.6rem;
+    line-height: 1.4;
+}
+h1, h2, h3{
+    font-weight: 550;
+}
+h1{
+    font-size: 4.0rem;
+    letter-spacing: 2px;
+    line-height: 0.85;
+}
+h2{
+    font-size: 3.2rem;
+}
+
+h3{
+    font-size: 1.8rem;
+}
+/* Links */
+a {
+    color: #424D20;
+}
+a:hover {
+    color: #1E6FC1;
+    text-decoration: none;
+}
+.btn {
+    background: #424D20;
+    color: #f6f6f6;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    display: inline-block;
+    padding: 7px;
+    letter-spacing: 0.25em;
+    line-height: 1;
+    border-radius: 10px;
+}
+.content-wrapper {
+    margin: 0 auto;
+    padding: 30px;
+    max-width: 900px;
+}
+
+/* HOME
+-----------------------------------*/ 
+.home {
+    background: url(../images/PKWet.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+.home .content-wrapper {
+    flex: 1 0 auto;
+}
+.content-bg {
+    background: rgb(255 255 255 / 0.6);
+    padding: 20px;
+}
+@media screen and (max-width:650px)  {
+    .home .content-wrapper {
+        padding: 10px;
+    }
+    .content-bg {
+        padding: 20px;
+    }
+}
+/* RESUME
+-----------------------------------*/
+.resume header::before {
+    background: url(../images/PKWet.jpg) center;
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 375px;
+}
+@media screen and (max-width:450px) { /* completely ignored  ;-( */
+    .resume header::before {
+        background: url(../images/PKWet.jpg) center;
+        background-size: cover;
+        display: block;
+        height: 250px;
+    }
+    h2 {
+        font-size: 2.8rem;
+    }
+}
+.resume-section {
+    margin-bottom: 50px;
+}
+.resume-section h2 {
+    border-bottom: 2px inset #424D20;
+}
+.download-link {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    background: #1E6FC1;
+    font-size: 1.5rem;
+}
+@media screen and (max-width:1205px){
+    .download-link {
+        position: absolute;
+    }
+}
+/* Profile
+-----------------------------------*/
+
+/* Projects
+-----------------------------------*/
+.project-item {
+    display: root-flow;
+    margin: 30px;
+}
+.project-item img {
+    width: 300px;
+    float: left;
+    margin-right: 20px
+}
+/* Work Experience
+-----------------------------------*/
+
+.work-details p {
+    margin: 0px;
+}
+@media screen and (max-width:799px) {
+    h3 {
+        margin-top: 22px;
+        margin-bottom: 10px;
+    }
+}
+@media screen and (min-width:800px) {
+    .work-item {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        column-gap: 20px;
+    }
+
+}
+/*Volunteering
+-----------------------------------*/
+/* Education
+-----------------------------------*/
+.education-item {
+    margin: 30px 0;
+}
+.education-item p {
+    margin: 0;
+}
+/* FOOTER
+-----------------------------------*/
+footer {
+    background: #222;
+    color: #B8AC99;
+
+}
+.socials {
+    list-style-type: none;
+    padding: 0;
+}
+.socials li {
+    display: inline-block;
+    margin-left: 10px;
+}
+.socials img {
+    width: 32px;
+}
+.socials img:hover {
+    opacity: 0.5;
+}
+@media screen and (min-width:550px) {
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+}
+@media screen and (max-width:549px) {
+    footer {
+        text-align: center;
+        padding: 10px;
+    }
+}
